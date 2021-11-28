@@ -42,7 +42,7 @@ const Footer = () => {
 
                     <div className="border-top text-center">
                         <p className={'designed text-dark mt-5'} >
-                            &copy; {new Date().getFullYear()} JimTag All rights reserved.
+                            &copy; {new Date().getFullYear()} PDHM-PDM All rights reserved.
                         </p>
 
                     </div>
