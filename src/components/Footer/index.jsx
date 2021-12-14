@@ -12,7 +12,7 @@ const Footer = () => {
                         <div className="sectionFooter offset-1 col-md-2 col-sm-12 mb-2">
                             <h5 className={'text-white'}>Accueil</h5>
                             <ul className="nav flex-column">
-                                <li className="nav-item mb-2 "><Link to={"/Business"} className="nav-link p-0 text-dark all_link">Business plan</Link></li>
+                                <li className="nav-item mb-2 "><Link to={"/Business-plan"} className="nav-link p-0 text-dark all_link">Business plan</Link></li>
                                 <li className="nav-item mb-2 "><Link to={"/Règlement"} className="nav-link p-0 text-dark all_link">Règlement</Link></li>
                                 <li className="nav-item mb-2 "><Link to={"/Historique"} className="nav-link p-0 text-dark all_link">Historique</Link></li>
                                 <li className="nav-item mb-2 "><Link to={"/Procedure"} className="nav-link p-0 text-dark all_link">Manuel de procedure</Link></li>
@@ -21,14 +21,14 @@ const Footer = () => {
                         <div className="col-md-3 col-sm-12 offset-1 mb-2 sectionFooter">
                             <h5 className={'text-white'}>PDH/M-PDM</h5>
                             <ul className="nav flex-column">
-                                <li className="nav-item mb-2 text-white"><Link to={'/service-client'} className="nav-link p-0 text-dark all_link">Service client 24/24H</Link></li>
-                                <li className="nav-item mb-2 text-white"><Link to={"/satisfaction"} className="nav-link p-0 text-dark all_link">99% de satisfaction</Link></li>
-                                <li className="nav-item mb-2 text-white"><Link to={"/paiement-sécurisé"} className="nav-link p-0 text-dark all_link">Paiement Sécurisé</Link></li>
+                                <li className="nav-item mb-2 text-white"><Link to={'/Vision'} className="nav-link p-0 text-dark all_link">Vision</Link></li>
+                                <li className="nav-item mb-2 text-white"><Link to={"/Mission"} className="nav-link p-0 text-dark all_link">Mission</Link></li>
+                                <li className="nav-item mb-2 text-white"><Link to={"/Nos-partenaire"} className="nav-link p-0 text-dark all_link">Nos Partenaire</Link></li>
+                                <li className="nav-item mb-2 text-white"><Link to={"/Innovation"} className="nav-link p-0 text-dark all_link">Innovation</Link></li>
                             </ul>
                         </div>
                         <div className="col-md-4 offset-1 sectionFooter col-sm-12">
                             <form>
-
                                 <div className="d-flex w-100 gap-2 mb-4">
                                     <input id="newsletter1" type="email" className="form-control" placeholder="Email address" />
                                     <button className="btn btn-dark ml-2" type="button">S'abonner</button>
@@ -47,7 +47,7 @@ const Footer = () => {
 
                 </footer>
                 <div className={'whatsapp_float'}>
-                    <a href={'https://wa.me/25779343813'} target={'_blank'}>
+                    <a href={'https://wa.me/25772042890'} target={'_blank'}>
                         <img src={whatsappimage}/>
                     </a>
                 </div>

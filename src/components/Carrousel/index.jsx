@@ -3,10 +3,10 @@ import { Carousel, Col, Container, Row } from 'react-bootstrap';
 import './style.css'
 import manmotor from '../../assets/images/manmotor.jpg'
 import directeur from '../../assets/images/directeur.jpeg'
-import employeur1 from '../../assets/images/employeur1.jpeg'
-import employeur2 from '../../assets/images/employeur2.jpeg'
-import employeur3 from '../../assets/images/employeur3.jpeg'
-import employeur4 from '../../assets/images/employeur4.jpeg'
+// import employeur1 from '../../assets/images/employeur1.jpeg'
+// import employeur2 from '../../assets/images/employeur2.jpeg'
+// import employeur3 from '../../assets/images/employeur3.jpeg'
+// import employeur4 from '../../assets/images/employeur4.jpeg'
 import employeur5 from '../../assets/images/employeur5.jpeg'
 
 
@@ -44,7 +44,7 @@ function CarrouselSlide() {
     </Col>
     <br /><br/>
     <Col lg={3} >
-        <Carousel fade>
+        <Carousel >
     <Carousel.Item>
         <img
         className="d-block w-100 h-50"
@@ -55,45 +55,7 @@ function CarrouselSlide() {
           <h6>Directeur Général et Visionnaire</h6>
         </Carousel.Caption>
     </Carousel.Item>
-    <Carousel.Item>
-        <img
-        className="d-block w-100"
-        src={employeur1}
-        alt="Second slide"
-        />
-       
-    </Carousel.Item>
-    <Carousel.Item>
-        <img
-        className="d-block w-100"
-        src={employeur2}
-        alt="Third slide"
-        />
-
-    </Carousel.Item>
-    <Carousel.Item>
-        <img
-        className="d-block w-100"
-        src={employeur3}
-        alt="Third slide"
-        />
-    </Carousel.Item>
-    <Carousel.Item>
-        <img
-        className="d-block w-100"
-        src={employeur4}
-        alt="Third slide"
-        />
-    </Carousel.Item>
-    <Carousel.Item>
-        <img
-        className="d-block w-100"
-        src={employeur5}
-        alt="Third slide"
-        />
-    </Carousel.Item>
         </Carousel>
-
     </Col>
     
   </Row>
