@@ -1,60 +1,67 @@
-import React from 'react'
+import React, {useState,useEffect} from 'react'
 import { Carousel, Col, Container, Row } from 'react-bootstrap';
+import AllServices from './services'
 import './style.css'
-import manmotor from '../../assets/images/manmotor.jpg'
-import directeur from '../../assets/images/directeur.jpeg'
-// import employeur1 from '../../assets/images/employeur1.jpeg'
-// import employeur2 from '../../assets/images/employeur2.jpeg'
-// import employeur3 from '../../assets/images/employeur3.jpeg'
-// import employeur4 from '../../assets/images/employeur4.jpeg'
-import employeur5 from '../../assets/images/employeur5.jpeg'
 
 
 function CarrouselSlide() {
+const [carouselHorizontal, setCarouselHorizontal] = useState([])
+const [carouselVertical, setCarouselVertical] = useState([])
+
+const getAllCarouselHorizontal = () =>{
+  AllServices.getAllCarouselHomepage().then((response) =>{
+    setCarouselHorizontal(response.data)
+  })
+}
+const getAllCarouselVertical = () =>{
+  AllServices.getAllCarouselHomepageAside().then((response) =>{
+    setCarouselVertical(response.data)
+  })
+}
+useEffect(() => {
+  getAllCarouselHorizontal()
+  getAllCarouselVertical()
+}, [])
   return (
     <Container fluid={true} >
   <Row className="mt-5 mb-5">
     <Col lg={9} className=" mb-5">
         <Carousel>
-    <Carousel.Item>
-        <img
-        className="d-block w-100"
-        src={manmotor}
-        alt="First slide"
-        />
-    </Carousel.Item>
-    <Carousel.Item>
-        <img
-        className="d-block w-100"
-        src={manmotor}
-        alt="Second slide"
-        />
-        
-    </Carousel.Item>
-    <Carousel.Item>
-        <img
-        className="d-block w-100"
-        src={manmotor}
-        alt="Third slide"
-        />
-
-    
-    </Carousel.Item>
+          {carouselHorizontal && carouselHorizontal.map(carousel =>(
+            <Carousel.Item key={carousel.id}>
+            <img
+            className="d-block w-100"
+            src={`https://back-office.pdhm-pdm.com/images/proprieties/${carousel.slide}`}
+            alt="First slide"
+            width={'1200'}
+            height={'415'}
+            />
+        </Carousel.Item>
+          ))}
+            
         </Carousel>
     </Col>
     <br /><br/>
     <Col lg={3} >
         <Carousel >
-    <Carousel.Item>
-        <img
-        className="d-block w-100 h-50"
-        src={directeur}
-        alt="First slide"
-        />
-        <Carousel.Caption className={'topCarrouselAside'}>
-          <h6>Directeur Général et Visionnaire</h6>
-        </Carousel.Caption>
-    </Carousel.Item>
+          { 
+          carouselVertical && carouselVertical.map((carouselaside =>(
+            <Carousel.Item key={carouselaside.id}>
+            <img
+            className="d-block w-100 h-50"
+            src={`https://back-office.pdhm-pdm.com/images/proprieties/${carouselaside.image}`}
+            alt={carouselaside.title}
+            />
+            <Carousel.Caption className={'topCarrouselAside'}>
+              <h6>{carouselaside.title}</h6>
+            </Carousel.Caption>
+        </Carousel.Item>
+
+          )))
+            
+          }
+            
+            
         </Carousel>
     </Col>
     

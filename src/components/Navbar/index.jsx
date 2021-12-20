@@ -20,8 +20,7 @@ function Navigation() {
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">
     <Nav className="me-auto topHeader">
-    </Nav>
-    <Nav>
+   
     <Nav.Link as={Link} to="/">Accueil</Nav.Link>
         <NavDropdown title="Pdh/m-pdm" id="collasible-nav-dropdown">
           <NavDropdown.Item  as={Link} to="/Vision">Vision</NavDropdown.Item>
