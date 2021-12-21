@@ -1,9 +1,6 @@
 import React,{useState,useEffect} from 'react'
 import AllServices from './services'
 import { Card, Col, Container, Row,Button } from 'react-bootstrap';
-import moto2 from '../../assets/images/4.jpg'
-import moto4 from '../../assets/images/4.jpg'
-import moto7 from '../../assets/images/4.jpg'
 import './style.css'
 import { Link } from 'react-router-dom';
 
@@ -80,7 +77,7 @@ function CardProduct() {
                 <Card.Text >
                 {Regle.description}
                 </Card.Text>
-                <Link to={'/Historique'}> <Button variant="primary">En savoir plus</Button></Link>
+                <Link to={'/Règlement'}> <Button variant="primary">En savoir plus</Button></Link>
               </Card.Body>
            </>
          ))}

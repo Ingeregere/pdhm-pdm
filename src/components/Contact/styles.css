@@ -1,0 +1,7 @@
+.cardcontact {
+    width: 500px;
+    max-width: 100%;
+  }
+  .bgContact{
+      background-image: url('../../assets/images/manmotor.jpg');
+  }

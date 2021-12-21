@@ -18,6 +18,7 @@ import ManueldeProcedure from './pages/ManueldeProcedure/ManueldeProcedure'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Footer from './components/Footer';
 import Navigation from './components/Navbar';
+import Contact from './pages/Contact';
 
 function App() {
   return (
@@ -38,6 +39,8 @@ function App() {
           <Route path='/Règlement' exact component={Reglement} />
           <Route path='/Historique' exact component={Historique} />
           <Route path='/Procedure' exact component={ManueldeProcedure} />
+          <Route path='/Contactez-nous' exact component={Contact} />
+
 
       </Switch>
       <Footer />
