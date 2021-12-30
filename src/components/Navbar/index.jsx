@@ -34,12 +34,12 @@ function Navigation() {
           <NavDropdown.Item as={Link} to="/Regional">Regional</NavDropdown.Item>
           <NavDropdown.Item as={Link} to="/Provinciale">Provinciale</NavDropdown.Item>
           <NavDropdown.Item as={Link} to="/Zonale">Zonale</NavDropdown.Item>
-          <NavDropdown.Item as={Link} to="/Collinaire">Collinale</NavDropdown.Item>
+          <NavDropdown.Item as={Link} to="/Communale">Communale</NavDropdown.Item>
         </NavDropdown>
       <Nav.Link as={Link} to="/Contactez-nous" className={'text-light'}>CONTACTEZ-NOUS</Nav.Link>
     </Nav>
     <Nav>
-      <Nav.Link href="#deets" c> <span className={'text-light iconbtn'}><BsFacebook /></span></Nav.Link>
+      <Nav.Link href="#deets"> <span className={'text-light iconbtn'}><BsFacebook /></span></Nav.Link>
       <Nav.Link eventKey={2} href="#memes"> <span className={'text-light iconbtn'}><BsYoutube /></span></Nav.Link>
       <Nav.Link eventKey={2} href="#memes"><span className={'text-light iconbtn'}><BsTwitter /></span></Nav.Link>
     </Nav>

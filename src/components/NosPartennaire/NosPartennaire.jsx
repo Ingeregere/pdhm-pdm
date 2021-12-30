@@ -1,39 +1,29 @@
-import React from 'react'
-import { Card, Container, Button } from 'react-bootstrap'
-import { BsFillArrowRightCircleFill } from 'react-icons/bs';
+import React, {useState, useEffect} from 'react'
+import AllServices from './services'
+import {  Container } from 'react-bootstrap'
+import ContentPage from "../contentPage";
 
 
-function Vision() {
+function PartnerContent() {
+    const [content, setContent] = useState([])
+
+    const getAllContent = () =>{
+        AllServices.getAllServices().then((response) =>{
+            setContent(response.data)
+        })
+    }
+    useEffect(() => {
+        getAllContent()
+    }, [])
+
     return (
-        <Container fluid={false}>
-            <Card className=" mt-5 ">
-                    <Card.Header className={'text-dark'} >
-                        <h4>
-                        Partenaires  
-                        </h4>
 
-                    </Card.Header>
-                    <Card.Body>
-                        <Card.Title>Partenaires </Card.Title>
-                        <Card.Text className={'m-5'}>
-                         <p>
-                            <BsFillArrowRightCircleFill className={'mr-3'}  /> 
-                            Nyabenda jean  
-                          </p>
-                        <p> 
-                            <BsFillArrowRightCircleFill className={'mr-3'} /> 
-                            Nahimana jeannette      
-                        </p>
-                        <p> 
-                            <BsFillArrowRightCircleFill className={'mr-3'} /> 
-                            Karikurubu théodosie 
-                        </p>
-                        
-                        </Card.Text>
-                    </Card.Body>
-            </Card>
+        <Container fluid={false}>
+            { content && content.map(currentContent =>(
+                <ContentPage currentContent={currentContent}  key={currentContent.id}/>
+            ))}
         </Container>
     )
 }
 
-export default Vision
+export default PartnerContent

@@ -1,10 +1,10 @@
 import CardProduct from '../../components/Card';
-import NationalPage from '../../components/Mission/Mission'
+import NationContent from "../../components/National/National";
 
 function Vision() {
   return (
     <div className={'tophome'} >
-      <NationalPage />
+      <NationContent />
       <CardProduct />
     </div>
   );

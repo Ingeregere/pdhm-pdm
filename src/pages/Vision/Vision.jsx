@@ -1,11 +1,10 @@
 import CardProduct from '../../components/Card';
-import Navigation from '../../components/Navbar';
-import VisionPage from '../../components/Vision/Vision'
+import VisionContent from "../../components/Vision/Vision";
 
 function Vision() {
   return (
     <div className={'tophome'} >
-      <VisionPage />
+      <VisionContent />
       <CardProduct />
     </div>
   );

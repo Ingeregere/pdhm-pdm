@@ -8,7 +8,7 @@ import National from './pages/National/National'
 import Regional from './pages/Regional/Regional'
 import Provincial from './pages/Provincial/Provincial'
 import Zonal from './pages/Zonal/Zonal'
-import Collinaire from './pages/Collinaire/Collinaire'
+import Communal from './pages/Communal/Communal'
 import BusinnessPlan from './pages/BisinessPlan/BusinessPlan'
 import Reglement from './pages/Reglement/Reglement'
 import Historique from './pages/Historique/Historique'
@@ -34,7 +34,7 @@ function App() {
           <Route path='/Regional' exact component={Regional} />
           <Route path='/Provinciale' exact component={Provincial} />
           <Route path='/Zonale' exact component={Zonal} />
-          <Route path='/Collinaire' exact component={Collinaire} />
+          <Route path='/Communale' exact component={Communal} />
           <Route path='/Businness-plan' exact component={BusinnessPlan} />
           <Route path='/Règlement' exact component={Reglement} />
           <Route path='/Historique' exact component={Historique} />

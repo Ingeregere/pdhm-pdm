@@ -1,28 +1,29 @@
-import React from 'react'
-import { Card, Container, Button } from 'react-bootstrap'
-import { BsFillArrowRightCircleFill } from 'react-icons/bs';
+import React, {useState, useEffect} from 'react'
+import AllServices from './services'
+import {  Container } from 'react-bootstrap'
+import ContentPage from "../contentPage";
 
 
-function Vision() {
+function VisionContent() {
+    const [content, setContent] = useState([])
+
+    const getAllContent = () =>{
+        AllServices.getAllServices().then((response) =>{
+            setContent(response.data)
+        })
+    }
+    useEffect(() => {
+        getAllContent()
+    }, [])
+
     return (
+
         <Container fluid={false}>
-            <Card className=" mt-5 ">
-                    <Card.Header className={'text-dark'} ><h3>Vision du PDH/M-PDM</h3></Card.Header>
-                    <Card.Body>
-                        <Card.Title>Vision du PDH/M-PDM</Card.Title>
-                        <Card.Text className={'m-5'}>
-                         <p>
-                            <BsFillArrowRightCircleFill className={'ml-3'}  /> Mettre en marche une industrie organisée et professionnalisée avec des  sources soutenues des revenues qui contribuent au développement national en général et prévenir la solution aux problèmes vécus par la jeunesse motocycliste/motards: le chômage, 
-                                le vol, les meurtres, les accidents routiers, diminution des jeunes chômeurs  dans le pays. 
-                          </p>
-                        <p> 
-                            <BsFillArrowRightCircleFill className={'ml-3'} /> Créer de l’emploi et changer la mentalité des Motards.
-                        </p>
-                        </Card.Text>
-                    </Card.Body>
-            </Card>
+            { content && content.map(currentContent =>(
+                <ContentPage currentContent={currentContent}  key={currentContent.id}/>
+            ))}
         </Container>
     )
 }
 
-export default Vision
+export default VisionContent

@@ -42,11 +42,12 @@ function CardProduct() {
   }, [])
   return (
     <Container fluid className={'mt-5'}>
+      <h3>Nos activités</h3>
     <Row>
-      <Col>
+      <Col sm={3} >
       <Card style={{ width: '18rem' }} className={'mb-2 mt-2 mr-2 ml-2'} >
       {businessplan && businessplan.map(businness=>(
-           <>
+           <div key={businness.id}>
                <Card.Img 
                alt={businness.title}
                variant="top"
@@ -59,14 +60,14 @@ function CardProduct() {
                 </Card.Text>
                 <Link to={'/Businness-plan'}> <Button variant="primary">En savoir plus</Button></Link>
               </Card.Body>
-           </>
+           </div>
          ))}
       </Card>
       </Col>
-      <Col>
+      <Col sm={3} >
       <Card style={{ width: '18rem' }} className={'mb-2 mt-2 mr-2 ml-2'} >
       {reglement && reglement.map(Regle=>(
-           <>
+           <div key={Regle.id}>
                <Card.Img 
                alt={Regle.title}
                variant="top"
@@ -79,14 +80,14 @@ function CardProduct() {
                 </Card.Text>
                 <Link to={'/Règlement'}> <Button variant="primary">En savoir plus</Button></Link>
               </Card.Body>
-           </>
+           </div>
          ))}
       </Card>
       </Col>
-      <Col>
+      <Col sm={3} >
       <Card style={{ width: '18rem' }} className={'mb-2 mt-2 mr-2 ml-2'} >
          {historique && historique.map(history=>(
-           <>
+           <div key={history.id}>
                <Card.Img 
                alt={history.title}
                variant="top"
@@ -99,14 +100,14 @@ function CardProduct() {
                 </Card.Text>
                 <Link to={'/Historique'}> <Button variant="primary">En savoir plus</Button></Link>
               </Card.Body>
-           </>
+           </div>
          ))}
       </Card>
       </Col>
-      <Col>
+      <Col sm={3} >
       <Card style={{ width: '18rem' }} className={'mb-2 mt-2 mr-2 ml-2'} >
          {procedure && procedure.map(proceduremanuel=>(
-           <>
+           <div key={proceduremanuel.id}>
                <Card.Img 
                alt={proceduremanuel.title}
                variant="top"
@@ -119,7 +120,7 @@ function CardProduct() {
                 </Card.Text>
                 <Link to={'/Procedure'}> <Button variant="primary">En savoir plus</Button></Link>
               </Card.Body>
-           </>
+           </div>
          ))}
       </Card>
       </Col>

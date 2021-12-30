@@ -1,11 +1,10 @@
 import CardProduct from '../../components/Card';
-import Navigation from '../../components/Navbar';
-import Collinaire from '../../components/Vision/Vision'
+import CommunalContent from "../../components/Communal/Communal";
 
 function Vision() {
   return (
     <div className={'tophome'}>
-      <Collinaire />
+      <CommunalContent />
       <CardProduct />
     </div>
   );

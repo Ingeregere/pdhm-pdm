@@ -1,39 +1,29 @@
-import React from 'react'
-import { Card, Container, Button } from 'react-bootstrap'
-import { BsFillArrowRightCircleFill } from 'react-icons/bs';
+import React, {useState, useEffect} from 'react'
+import AllServices from './services'
+import {  Container } from 'react-bootstrap'
+import ContentPage from "../contentPage";
 
 
-function Vision() {
+function InnovationContent() {
+    const [content, setContent] = useState([])
+
+    const getAllContent = () =>{
+        AllServices.getAllServices().then((response) =>{
+            setContent(response.data)
+        })
+    }
+    useEffect(() => {
+        getAllContent()
+    }, [])
+
     return (
-        <Container fluid={false}>
-            <Card className=" mt-5 ">
-                    <Card.Header className={'text-dark'} >
-                        <h4>
-                        INNOVATION 
-                        </h4>
 
-                    </Card.Header>
-                    <Card.Body>
-                        <Card.Title>INNOVATION</Card.Title>
-                        <Card.Text className={'m-5'}>
-                         <p>
-                            <BsFillArrowRightCircleFill className={'mr-3'}  /> 
-                            Localisation/Tracking des motards sur tout le territoire et leur changement de mentalités.  
-                          </p>
-                        <p> 
-                            <BsFillArrowRightCircleFill className={'mr-3'} /> 
-                            Renforcement économique et sécuritaire du pays.       
-                        </p>
-                        <p> 
-                            <BsFillArrowRightCircleFill className={'mr-3'} /> 
-                            Eduquer la clientèle à apprendre la culture d'épargner.  
-                        </p>
-                        
-                        </Card.Text>
-                    </Card.Body>
-            </Card>
+        <Container fluid={false}>
+            { content && content.map(currentContent =>(
+                <ContentPage currentContent={currentContent}  key={currentContent.id}/>
+            ))}
         </Container>
     )
 }
 
-export default Vision
+export default InnovationContent

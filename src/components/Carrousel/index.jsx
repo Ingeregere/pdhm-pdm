@@ -48,10 +48,11 @@ useEffect(() => {
           carouselVertical && carouselVertical.map((carouselaside =>(
             <Carousel.Item key={carouselaside.id}>
             <img
-            className="d-block w-100 h-50"
+            className="d-block w-100"
             src={`https://back-office.pdhm-pdm.com/images/proprieties/${carouselaside.image}`}
             alt={carouselaside.title}
-            />
+            height={'415'}  
+            />   
             <Carousel.Caption className={'topCarrouselAside'}>
               <h6>{carouselaside.title}</h6>
             </Carousel.Caption>
