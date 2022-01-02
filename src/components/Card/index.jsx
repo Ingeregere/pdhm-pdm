@@ -56,7 +56,9 @@ function CardProduct() {
               <Card.Body>
                 <Card.Title  className={'text-primary'}>{businness.title}</Card.Title>
                 <Card.Text >
-                {businness.description}
+                  {businness.description.length > 50 ?
+                      `${businness.description.substring(0, 50)}...` : businness.description
+                  }
                 </Card.Text>
                 <Link to={'/Businness-plan'}> <Button variant="primary">En savoir plus</Button></Link>
               </Card.Body>
@@ -76,7 +78,9 @@ function CardProduct() {
               <Card.Body>
                 <Card.Title  className={'text-primary'}>{Regle.title}</Card.Title>
                 <Card.Text >
-                {Regle.description}
+                  {Regle.description.length > 50 ?
+                      `${Regle.description.substring(0, 50)}...` : Regle.description
+                  }
                 </Card.Text>
                 <Link to={'/Règlement'}> <Button variant="primary">En savoir plus</Button></Link>
               </Card.Body>
@@ -96,7 +100,9 @@ function CardProduct() {
               <Card.Body>
                 <Card.Title  className={'text-primary'}>{history.title}</Card.Title>
                 <Card.Text >
-                {history.description}
+                  {history.description.length > 50 ?
+                      `${history.description.substring(0, 50)}...` : history.description
+                  }
                 </Card.Text>
                 <Link to={'/Historique'}> <Button variant="primary">En savoir plus</Button></Link>
               </Card.Body>
@@ -116,7 +122,9 @@ function CardProduct() {
               <Card.Body>
                 <Card.Title  className={'text-primary'}>{proceduremanuel.title}</Card.Title>
                 <Card.Text >
-                {proceduremanuel.description}
+                  {proceduremanuel.description.length > 50 ?
+                      `${proceduremanuel.description.substring(0, 50)}...` : proceduremanuel.description
+                  }
                 </Card.Text>
                 <Link to={'/Procedure'}> <Button variant="primary">En savoir plus</Button></Link>
               </Card.Body>
