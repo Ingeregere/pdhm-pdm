@@ -30,11 +30,11 @@ function Navigation() {
           <NavDropdown.Item as={Link} to="/Innovation">Innovation</NavDropdown.Item>
         </NavDropdown>
         <NavDropdown title={<span className="text-light my-auto">SUPERVISION</span>} style={{color: 'red'}} id="collasible-nav-dropdown" className={'text-light'}>
-          <NavDropdown.Item as={Link} to="/National">National</NavDropdown.Item>
-          <NavDropdown.Item as={Link} to="/Regional">Regional</NavDropdown.Item>
-          <NavDropdown.Item as={Link} to="/Provinciale">Provinciale</NavDropdown.Item>
-          <NavDropdown.Item as={Link} to="/Zonale">Zonale</NavDropdown.Item>
-          <NavDropdown.Item as={Link} to="/Communale">Communale</NavDropdown.Item>
+            <NavDropdown.Item as={Link} to="/National">National</NavDropdown.Item>
+            <NavDropdown.Item as={Link} to="/Regional">Regional</NavDropdown.Item>
+            <NavDropdown.Item as={Link} to="/Provinciale">Provinciale</NavDropdown.Item>
+            <NavDropdown.Item as={Link} to="/Communale">Communale</NavDropdown.Item>
+            <NavDropdown.Item as={Link} to="/Zonale">Zonale</NavDropdown.Item>
         </NavDropdown>
       <Nav.Link as={Link} to="/Contactez-nous" className={'text-light'}>CONTACTEZ-NOUS</Nav.Link>
     </Nav>
