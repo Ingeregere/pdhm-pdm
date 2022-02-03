@@ -33,8 +33,7 @@ useEffect(() => {
             className="d-block w-100"
             src={`https://back-office.pdhm-pdm.com/images/proprieties/${carousel.slide}`}
             alt="First slide"
-            width={'1200'}
-            height={'415'}
+            
             />
         </Carousel.Item>
           ))}
