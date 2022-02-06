@@ -9,7 +9,6 @@ class Rule {
     
 }
 
-
 export default new Rule
 
 

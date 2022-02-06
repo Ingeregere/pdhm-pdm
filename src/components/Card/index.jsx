@@ -51,7 +51,7 @@ function CardProduct() {
                <Card.Img 
                alt={businness.title}
                variant="top"
-               src={`https://back-office.pdhm-pdm.com/images/proprieties/${businness.image}`}
+               src={`https://admin.pdhm-pdm.com/images/proprieties/${businness.image}`}
                 />
               <Card.Body>
                 <Card.Title  className={'text-primary'}>{businness.title}</Card.Title>
@@ -73,7 +73,7 @@ function CardProduct() {
                <Card.Img 
                alt={Regle.title}
                variant="top"
-               src={`https://back-office.pdhm-pdm.com/images/proprieties/${Regle.image}`}
+               src={`https://admin.pdhm-pdm.com/images/proprieties/${Regle.image}`}
                 />
               <Card.Body>
                 <Card.Title  className={'text-primary'}>{Regle.title}</Card.Title>
@@ -95,7 +95,7 @@ function CardProduct() {
                <Card.Img 
                alt={history.title}
                variant="top"
-               src={`https://back-office.pdhm-pdm.com/images/proprieties/${history.image}`}
+               src={`https://admin.pdhm-pdm.com/images/proprieties/${history.image}`}
                 />
               <Card.Body>
                 <Card.Title  className={'text-primary'}>{history.title}</Card.Title>
@@ -117,7 +117,7 @@ function CardProduct() {
                <Card.Img 
                alt={proceduremanuel.title}
                variant="top"
-               src={`https://back-office.pdhm-pdm.com/images/proprieties/${proceduremanuel.image}`}
+               src={`https://admin.pdhm-pdm.com/images/proprieties/${proceduremanuel.image}`}
                 />
               <Card.Body>
                 <Card.Title  className={'text-primary'}>{proceduremanuel.title}</Card.Title>

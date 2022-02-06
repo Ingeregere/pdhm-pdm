@@ -31,9 +31,8 @@ useEffect(() => {
             <Carousel.Item key={carousel.id}>
             <img
             className="d-block w-100"
-            src={`https://back-office.pdhm-pdm.com/images/proprieties/${carousel.slide}`}
+            src={`https://admin.pdhm-pdm.com/images/proprieties/${carousel.slide}`}
             alt="First slide"
-            
             />
         </Carousel.Item>
           ))}
@@ -48,7 +47,7 @@ useEffect(() => {
             <Carousel.Item key={carouselaside.id}>
             <img
             className="d-block w-100"
-            src={`https://back-office.pdhm-pdm.com/images/proprieties/${carouselaside.image}`}
+            src={`https://admin.pdhm-pdm.com/images/proprieties/${carouselaside.image}`}
             alt={carouselaside.title}
             height={'415'}  
             />   
