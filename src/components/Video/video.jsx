@@ -47,14 +47,14 @@ function VideoPdhm() {
           <Col md={6}>
             <Card style={{ width: '100%',marginLeft: '5rem',marginTop: '3.5em',height: '360px' }}>
                 <Card.Body>
-                    <Card.Text style={{lineHeight:'2.5em'}}>
+                    <Card.Text style={{lineHeight:'1.5em'}}>
                     {TextPdf.length > 50 ?
                       `${TextPdf.substring(0, 50)}...` : TextPdf
                   }
                     
     
                     </Card.Text>
-                    <Card.Link href={PdfDocument}>Télecharger en pdf</Card.Link>
+                    <Card.Link href={`https://admin.pdhm-pdm.com//pdf/publicity/${PdfDocument}`}>Télecharger en pdf</Card.Link>
                   
                 </Card.Body>
             </Card>
