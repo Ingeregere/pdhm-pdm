@@ -4,7 +4,6 @@ import ReactPlayer from 'react-player'
 import AllServices from './services'
 import AllServicesPdf from './pdefServices';
 import ReactHtmlParser from "react-html-parser";
-import VideoApp from './videoTest';
 
 
 

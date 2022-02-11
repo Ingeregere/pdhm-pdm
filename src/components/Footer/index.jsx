@@ -30,7 +30,7 @@ const Footer = () => {
     const showSuccess = () => (
 
         <Alert className={"alert-success"} style={{ display: success ? '' : 'none' }}>
-            <strong> <center>{success} {email}</center> </strong>
+            <strong> <center>{success} </center> </strong>
         </Alert>
     )
 
